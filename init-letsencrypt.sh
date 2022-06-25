@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-domains=(example.com www.example.com) # Specify domains here or use the -d argument
+domains=(franciscoulloa.com www.franciscoulloa.com) # Specify domains here or use the -d argument
 data_path="./data/certbot" # Specify data path here or use the --data-path argument
 email="" # Specify email here or use the --email argument
 staging=0 # Set to 1 here or use the --staging argument
@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
       exit
       ;;
     -d|--domain)
-      if [ "${domains[0]}" == "example.com" ]; then domains=(); fi
+      if [ "${domains[0]}" == "franciscoulloa.com" ]; then domains=(); fi
       domains+=("$2")
       shift; shift
       ;;
@@ -56,7 +56,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Make sure at least one domain has been configured
-if [ "${domains[0]}" == "example.com" ] || [ "${domains[0]}" == "" ]; then
+if [ "${domains[0]}" == "franciscoulloa.com" ] || [ "${domains[0]}" == "" ]; then
   echo "Error: You must specify at least one domain."
   exit 1
 fi
